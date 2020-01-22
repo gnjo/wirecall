@@ -82,13 +82,13 @@ red hatting: heat
 blue hatting: lake
 ```
 ```
-let wi=wirewalk(maps)
+let wi=wirewalk(maps,dtx)//devicecontext 
 setInterval(()=>{
  wi.iswarp(x,y,z,v)
  wi.warp(x,y,z,v)
  wi.walk(v)
  wi.iswalk(v)
- wi.draw(dt) //devicecontext 
+ wi.draw(dtx) 
 },1000/20)
 
 ```
