@@ -1,5 +1,5 @@
 # echos
-simple message engine
+minimal input engine
 ```
 1.canable the message
 2.canable the selecting 5selects only.
