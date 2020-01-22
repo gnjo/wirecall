@@ -72,8 +72,8 @@ let ec=echos({
 ,jumps:{}
 ,line:0 //readline
 ,jumpback:1 //number
-,mainmaxlines:6 //stock
-,mainmaxrings:40 //one line max length
+,selectmaxlines:6 //stock
+,selectmaxrings:40 //one line max length
 ,cursor:'>' //selecting cursor
 ,buffer:[] //flowbuffer message layer0 only
 ,lex:lex
