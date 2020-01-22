@@ -81,7 +81,6 @@ setInterval(()=>{
   o.end=0 //flg
   ;
   o.get=()=>{
-   console.log(o.lists)
    let s=o.block?void 0:o.lists[o.line]
    if(s) o.block=1;
    return s;
