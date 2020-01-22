@@ -55,13 +55,6 @@ $$9=void 0 //
 $$k=void 0 //latest key
 $$n=void 0 //latest select number
 $$m='free' //now mode, sel|mes|free
-lex=(text,offset)=>{
- //return [{type,str,offset+line},...]
-}
-jlex=(macros)=>{
- //return {'address':line,...}
-}
-cmd={}
 ```
 ```
 let ec=echos()
