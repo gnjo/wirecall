@@ -64,7 +64,8 @@ let ec=echos({
 ,jumpback:1 //number
 ,mainmaxlines:6 //stock
 ,mainmaxrings:40 //one line max length
-,buffer:[] //flowbuffer message layer0 only and selecting is off
+,cursor:'>' //selecting cursor
+,buffer:[] //flowbuffer message layer0 only
 ,lex:lex
 ,cmd:cmd
 ,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
