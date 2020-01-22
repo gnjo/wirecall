@@ -64,41 +64,7 @@ jlex=(macros)=>{
 cmd={}
 ```
 ```
-let ec=echos({
- fps:20
-,macros:[]
-,jumps:{}
-,line:0 //readline
-,jumpback:1 //number
-,selectmaxlines:6 //stock
-,selectmaxrings:40 //one line max length
-,cursor:'>' //selecting cursor
-,buffer:[] //flowbuffer message layer0 only
-,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
-,tick:0
-,waitcount:0
-,cl:void 0
-,caller:function(ec){/**/}
-,lex:lex
-,jlex:jlex
-,cmd:cmd
-,ctrl:controller
-,add:(text)=>{
- let a=ec.lex(text,macros.length)
- let j=ec.jlex(a)
- macros=macros.concat(a)
- jumps=Object.assign(jumps,j)
- return ec;
-}
-,run:(caller)=>{
- ec.caller=caller|ec.caller
- ec.cl=setInterval(()=>{
-  ec.tick++;
-  ec.caller(ec);
- },1000/ec.fps)
-}
-})
-;
+let ec=echos()
 ec.add(text).run((ec)=>{
  //polling fps for draw.
  //message $$0...$$9
