@@ -88,12 +88,25 @@ setInterval(()=>{
  wi.warp(x,y,z,v)
  wi.walk(v)
  wi.iswalk(v)
- wi.draw(dt) //devicecontext
- 
+ wi.draw(dt) //devicecontext 
+},1000/20)
+
+```
+```
  wi.looknine(x,y,z,v);
  0 1 2
  3 4 5
  6 7 8
  - 9 -
-},1000/20)
-```
+
+ wi.lookaround(x,y,z,v,7) //3,5,7,9
+       N 
+ 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0
+ 0 0 0 m 0 0 0 E
+ 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0
+ 
+``
