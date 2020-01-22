@@ -76,6 +76,7 @@ let ec=echos({
 ,buffer:[] //flowbuffer message layer0 only
 ,lex:lex
 ,cmd:cmd
+,ctrl:controller
 ,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
 ,tick:0
 ,waitcount:0
