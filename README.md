@@ -67,10 +67,13 @@ let ec=echos({
 ,buffer:[] //flowbuffer message layer0 only and selecting is off
 ,lex:lex
 ,cmd:cmd
+,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
 })
 ;
-e.key('w,a,s,d,j,k,i,l,u,o') //^,<,v,>,a,b,x,y,l,r
- .run(text,(ec)=>{
+ec.run(text,(ec)=>{
  //polling fps for draw.
+ //message $$0...$$9
+ //selectnumber $$n
+ //mode $$m
 })
 ```
