@@ -62,6 +62,8 @@ jlex=(macros)=>{
  //return {'address':line,...}
 }
 cmd={}
+add=(text)=>{
+}
 ```
 ```
 let ec=echos({
@@ -74,12 +76,13 @@ let ec=echos({
 ,selectmaxrings:40 //one line max length
 ,cursor:'>' //selecting cursor
 ,buffer:[] //flowbuffer message layer0 only
-,lex:lex
-,cmd:cmd
-,ctrl:controller
 ,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
 ,tick:0
 ,waitcount:0
+,lex:lex
+,jlex:jlex
+,cmd:cmd
+,ctrl:controller
 ,add:add
 })
 ;
