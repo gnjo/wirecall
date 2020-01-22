@@ -77,6 +77,8 @@ let ec=echos({
 ,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
 ,tick:0
 ,waitcount:0
+,cl:void 0
+,caller:function(ec){/**/}
 ,lex:lex
 ,jlex:jlex
 ,cmd:cmd
@@ -87,6 +89,13 @@ let ec=echos({
  macros=macros.concat(a)
  jumps=Object.assign(jumps,j)
  return ec;
+}
+,run:(caller)=>{
+ ec.caller=caller|ec.caller
+ ec.cl=setInterval(()=>{
+  ec.tick++;
+  ec.caller(ec);
+ },1000/ec.fps)
 }
 })
 ;
