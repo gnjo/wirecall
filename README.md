@@ -59,7 +59,7 @@ let ec=echos({
 ,jumpback:1 //number
 ,mainmaxlines:5 //stock
 ,mainmaxrings:40 //one line max length
-,buffer:[] //flowbuffer
+,buffer:[] //flowbuffer message layer0 only and selecting is off
 ,lex:lex
 ,cmd:cmd
 })
