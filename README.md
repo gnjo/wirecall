@@ -22,15 +22,32 @@ $$8=void 0 //
 $$9=void 0 //other return 0...9
 $$k=void 0 //latest key
 $$n=void 0 //latest select number
-$$l=void 0 //log message same ec.log
+$$l='' //log message same ec.log
+$$s='' //select message same ec.sem
+
+lex=(text)=>{
+ //return [{type,str,line},...]
+}
+cmd=(obj)=>{
+//obj={type,str,line}
+}
 ```
 ```
 let ec=echos({
- 'fps':20
-,'line':0 //readline
-,'jumpback':1 //number
-,'logmaxlines':10 //stock
-,'logmaxrings':40 //one line max length
-,'buffer':[] //flowbuffer 
-}).run(text,caller)
+ fps:20
+,macros:[]
+,jumps:[]
+,line:0 //readline
+,jumpback:1 //number
+,logmaxlines:10 //stock
+,logmaxrings:40 //one line max length
+,buffer:[] //flowbuffer
+,lex:lex
+,cmd:cmd
+})
+;
+e.key('w,a,s,d,j,k,i,l,u,o') //^,<,v,>,a,b,x,y,l,r
+ .run(text,(ec)=>{
+ //polling fps for draw.
+})
 ```
