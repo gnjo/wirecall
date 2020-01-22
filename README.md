@@ -17,8 +17,8 @@ script('.../fn.js')
 {1}>>>#xyz //if jump
 *>same log need keywait
 >not keywait
-i>infomessage// if select use infomessage zone
-?>selectmessage
+1>infomessage// if select use infomessage zone
+?>selectmessage //use message layer 0
 {{{
 multiline input to $$$
 }}}
@@ -27,7 +27,7 @@ multiline input to $$$
 echos={} //core
 fn={} //util functions
 $$$=void 0 //return //$$ is global
-$$0=void 0 //
+$$0=void 0 //message layer 0 and select
 $$1=void 0 //
 $$2=void 0 //
 $$3=void 0 //
@@ -36,11 +36,9 @@ $$5=void 0 //
 $$6=void 0 //
 $$7=void 0 //
 $$8=void 0 //
-$$9=void 0 //other return 0...9
+$$9=void 0 //other 
 $$k=void 0 //latest key
 $$n=void 0 //latest select number
-$$l='' //log message same ec.log
-$$i='' //select message same ec.sem
 $$m='sel' //now mode, sel|mes|free
 lex=(text,offset)=>{
  //return [{type,str,offset+line},...]
@@ -59,8 +57,8 @@ let ec=echos({
 ,jumps:{}
 ,line:0 //readline
 ,jumpback:1 //number
-,logmaxlines:10 //stock
-,logmaxrings:40 //one line max length
+,mainmaxlines:5 //stock
+,mainmaxrings:40 //one line max length
 ,buffer:[] //flowbuffer
 ,lex:lex
 ,cmd:cmd
