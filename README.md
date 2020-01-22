@@ -7,6 +7,10 @@ simple message engine
 4.canable the simple jump
 ```
 ```
+script('.../echos.js')
+script('.../fn.js')
+```
+```
 echos={} //core
 fn={} //util functions
 $$$=void 0 //return //$$ is global
