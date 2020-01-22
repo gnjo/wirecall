@@ -61,9 +61,7 @@ lex=(text,offset)=>{
 jlex=(macros)=>{
  //return {'address':line,...}
 }
-cmd=(obj)=>{
-//obj={type,str,line}
-}
+cmd={}
 ```
 ```
 let ec=echos({
@@ -81,6 +79,7 @@ let ec=echos({
 ,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
 ,tick:0
 ,waitcount:0
+,add:add
 })
 ;
 ec.run(text,(ec)=>{
