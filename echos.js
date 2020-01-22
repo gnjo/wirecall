@@ -44,3 +44,46 @@ setInterval(()=>{
 },200)
 */
 /////////////////////////////////////////
+;(function(root){
+ function entry(_list){
+  let o={}
+  o.lists=_list||[] //lists
+  o.line=0 //count
+  o.block=0 //flg
+  o.end=0 //flg
+  ;
+  o.get=()=>{
+   let s=o.block?void 0:o.lists[o.line]
+   if(s) o.block=1;
+   return s;
+  }
+  o.next=(d)=>{
+   (d!=null)?o.line=d:o.line++;
+   o.end=(o.lists.length-1<o.line)?1:0;
+   return o.block=0
+  }
+  o.reload=(_list)=>{
+   o.block=1;
+   o.line=999;
+   o.lists=_list||[]
+   o.line=0;
+   o.block=0;
+   return;
+  }
+  o.isend=()=>{return o.end}
+  o.isEnd=o.isend
+  return o;
+ }
+ root.reader=entry;
+/*
+let li=`MRK\nCMM\nEVL「「あいうえを入れておく」」`.split('\n');
+let rd=reader(li);
+fn.q('button').onclick=()=>{
+ fn.q('pre').textContent=rd.get();
+ fn.q('pre.line').textContent=rd.line +','+ rd.end
+ fn.q('pre.end').textContent=rd.isEnd()?'end':'not'
+ rd.next();
+}
+*/ 
+})(this);
+/////////////////////////////////////////
