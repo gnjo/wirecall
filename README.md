@@ -70,3 +70,11 @@ ec.add(text).run((ec)=>{
  //mode $$m
 })
 ```
+
+#wirewalk
+```
+let wi=wirewalk(maps)
+setInterval(()=>{
+ wi.walk(x,y,z,v).draw(dt) //devicecontext
+},1000/20)
+```
