@@ -42,8 +42,11 @@ $$n=void 0 //latest select number
 $$l='' //log message same ec.log
 $$i='' //select message same ec.sem
 $$m='sel' //now mode, sel|mes|free
-lex=(text)=>{
- //return [{type,str,line},...]
+lex=(text,offset)=>{
+ //return [{type,str,offset+line},...]
+}
+jlex=(macros)=>{
+ //return {'address':line,...}
 }
 cmd=(obj)=>{
 //obj={type,str,line}
@@ -53,7 +56,7 @@ cmd=(obj)=>{
 let ec=echos({
  fps:20
 ,macros:[]
-,jumps:[]
+,jumps:{}
 ,line:0 //readline
 ,jumpback:1 //number
 ,logmaxlines:10 //stock
