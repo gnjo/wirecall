@@ -11,6 +11,17 @@ script('.../echos.js')
 script('.../fn.js')
 ```
 ```
+#xyz //set the jumpmark
+*  //wait 4count 
+{} //javascriptworld
+{1}>>>#xyz //if jump
+*>same log need keywait
+>not keywait
+i>infomessage// if select use infomessage zone
+?>selectmessage
+
+```
+```
 echos={} //core
 fn={} //util functions
 $$$=void 0 //return //$$ is global
@@ -27,8 +38,8 @@ $$9=void 0 //other return 0...9
 $$k=void 0 //latest key
 $$n=void 0 //latest select number
 $$l='' //log message same ec.log
-$$s='' //select message same ec.sem
-
+$$i='' //select message same ec.sem
+$$m='sel' //now mode, sel|mes|free
 lex=(text)=>{
  //return [{type,str,line},...]
 }
