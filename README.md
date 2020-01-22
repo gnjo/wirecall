@@ -77,7 +77,7 @@ floor
 yellow hatting: parrize
 purple hatting: dont magic
 green hatting: poizon
-gray hatting: 
+grey hatting: 
 red hatting: heat
 blue hatting: lake
 ```
