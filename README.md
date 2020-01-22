@@ -73,6 +73,15 @@ ec.add(text).run((ec)=>{
 
 #wirewalk
 ```
+floor
+yellow hatting: parrize
+purple hatting: dont magic
+green hatting: poizon
+gray hatting: 
+red hatting: heat
+blue hatting: lake
+```
+```
 let wi=wirewalk(maps)
 setInterval(()=>{
  wi.iswarp(x,y,z,v)
@@ -80,5 +89,11 @@ setInterval(()=>{
  wi.walk(v)
  wi.iswalk(v)
  wi.draw(dt) //devicecontext
+ 
+ wi.looknine(x,y,z,v);
+ 0 1 2
+ 3 4 5
+ 6 7 8
+ - 9 -
 },1000/20)
 ```
