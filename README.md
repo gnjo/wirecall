@@ -19,7 +19,9 @@ script('.../fn.js')
 >not keywait
 i>infomessage// if select use infomessage zone
 ?>selectmessage
-
+{{{
+multiline input to $$$
+}}}
 ```
 ```
 echos={} //core
