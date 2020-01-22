@@ -80,6 +80,7 @@ setInterval(()=>{
   o.block=0 //flg
   o.end=0 //flg
   ;
+  o.setlists=(d)=>{o.lists=d;}
   o.get=()=>{
    let s=o.block?void 0:o.lists[o.line]
    if(s) o.block=1;
