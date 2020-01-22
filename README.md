@@ -62,8 +62,6 @@ jlex=(macros)=>{
  //return {'address':line,...}
 }
 cmd={}
-add=(text)=>{
-}
 ```
 ```
 let ec=echos({
@@ -83,7 +81,13 @@ let ec=echos({
 ,jlex:jlex
 ,cmd:cmd
 ,ctrl:controller
-,add:add
+,add:(text)=>{
+ let a=ec.lex(text,macros.length)
+ let j=ec.jlex(a)
+ macros=macros.concat(a)
+ jumps=Object.assign(jumps,j)
+ return ec;
+}
 })
 ;
 ec.add(text).run((ec)=>{
