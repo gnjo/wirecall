@@ -88,7 +88,7 @@ setInterval(()=>{
  wi.warp(x,y,z,v)
  wi.walk(v)
  wi.iswalk(v)
- wi.draw(dtx) 
+ wi.draw() //if set dtx draw it.
 },1000/20)
 
 ```
