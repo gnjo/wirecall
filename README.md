@@ -82,7 +82,7 @@ let ec=echos({
 ,add:add
 })
 ;
-ec.run(text,(ec)=>{
+ec.add(text).run((ec)=>{
  //polling fps for draw.
  //message $$0...$$9
  //selectnumber $$n
