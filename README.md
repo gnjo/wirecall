@@ -32,6 +32,16 @@ multiline input to $$$
 echos={} //core
 fn={} //util functions
 $$$=void 0 //return //$$ is global
+$$r0=void 0 //other return
+$$r1=void 0 //other return 
+$$r2=void 0 //other return
+$$r3=void 0 //other return 
+$$r4=void 0 //other return 
+$$r5=void 0 //other return 
+$$r6=void 0 //other return 
+$$r7=void 0 //other return 
+$$r8=void 0 //other return 
+$$r9=void 0 //other return 
 $$0=void 0 //message layer 0 
 $$1=void 0 //
 $$2=void 0 //select layer
@@ -69,6 +79,8 @@ let ec=echos({
 ,lex:lex
 ,cmd:cmd
 ,keystr:'w,a,s,d,j,k,i,l,u,o' //^,<,v,>,a,b,x,y,l,r
+,tick:0
+,waitcount:0
 })
 ;
 ec.run(text,(ec)=>{
