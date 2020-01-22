@@ -18,7 +18,7 @@ script('.../fn.js')
 *>same log need keywait
 >not keywait
 1>infomessage// if select use infomessage zone
-?>selectmessage //use message layer 0
+?>selectmessage //use message layer 2
 {{{
 multiline input to $$$
 }}}
@@ -32,9 +32,9 @@ multiline input to $$$
 echos={} //core
 fn={} //util functions
 $$$=void 0 //return //$$ is global
-$$0=void 0 //message layer 0 and select
+$$0=void 0 //message layer 0 
 $$1=void 0 //
-$$2=void 0 //
+$$2=void 0 //select layer
 $$3=void 0 //
 $$4=void 0 //
 $$5=void 0 //
@@ -62,7 +62,7 @@ let ec=echos({
 ,jumps:{}
 ,line:0 //readline
 ,jumpback:1 //number
-,mainmaxlines:5 //stock
+,mainmaxlines:6 //stock
 ,mainmaxrings:40 //one line max length
 ,buffer:[] //flowbuffer message layer0 only and selecting is off
 ,lex:lex
