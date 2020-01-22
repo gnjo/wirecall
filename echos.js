@@ -73,6 +73,7 @@ setInterval(()=>{
 */
 /////////////////////////////////////////
 ;(function(root){
+ /*
  function entry(_list){
   let o={}
   o.lists=_list||[] //lists
@@ -104,6 +105,7 @@ setInterval(()=>{
   return o;
  }
  root.reader=entry;
+ */
 /*
 let li=`MRK\nCMM\nEVL「「あいうえを入れておく」」`.split('\n');
 let rd=reader(li);
@@ -114,5 +116,83 @@ fn.q('button').onclick=()=>{
  rd.next();
 }
 */ 
+})(this);
+/////////////////////////////////////////
+
+;(function(root){
+ let fn={}
+ fn.toSmall=(str)=>{
+  return str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+   return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+  }) 
+ }
+ fn.toBig=(str)=>{
+  return str.replace(/[A-Za-z0-9]/g, function(s) {
+   return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
+  });
+ }
+ root.toSmall=fn.toSmall;
+ root.toBig=fn.toBig
+})(this);
+///////////////////////////////////////////
+;(function(root){
+ let toBig=root.toBig
+ ;
+ //comment trim 
+ function _c(d){return d.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm,'')}
+ //eval
+ function _(obj){return Function('return (' + obj + ')')()}
+ //message rep
+ function _m(obj,bigflg){return obj.replace(/{(.*?)}/g,(d,dd)=>{return $$$=_(dd),bigflg?toBig(''+$$$):$$$})}
+ //trim { and }
+ function _t(obj){return obj.replace(/{|}/g,'')}
+ root._c=_c
+ root._=_
+ root._m=_m
+ root._t=_t
+})(this);
+//////////////////////////////////////////////
+;(function(root){
+
+ function typecheck(d){
+  //CMM,EVL,EVM,JMP,MRK,SEL,MES
+  let type='CMM'
+  ,re_EVL=/^{(\s|\S)*?}/
+  ,re_EVM=/^{{{(\s|\S)*?}}}/
+  ,re_JMP=/^{.*}>>>({.*}|#.*)/
+  ,re_MRK=/^#(.*)/
+  ,re_SEL=/^\?>.*/
+  ,re_WAI=/^\*{1,9}[^\>]/
+  ,re_MES=/^(\*[0-9]|[0-9\*]|)>.*/
+  let str=d
+  if(re_MRK.test(str)) type='MRK'
+  if(re_MES.test(str)) type='MES' 
+  if(re_EVL.test(str)) type='EVL'
+  if(re_EVM.test(str)) type='EVM' 
+  if(re_JMP.test(str)) type='JMP' 
+  if(re_MRK.test(str)) type='MRK'
+  if(re_SEL.test(str)) type='SEL'
+  if(re_WAI.test(str)) type='WAI'
+
+  return type
+ } 
+ function lex(_text,_offset){
+  let text=_c(_text)
+  ,offset=_offset||0
+  ,re=/\*{1,9}[^\>]|{.*}>>>({.*}|#.*)|#.*|\?>.*|(\*[0-9]|[0-9\*]|)>.*|{.*}|{{{([\s\S]*?)}}}/g
+  return text.match(re).map((d,i)=>{return {str:d,line:i+offset,type:typecheck(d)}})
+  ;
+ }
+ function jlex(macros){
+  //return {'address':line,...}
+  //console.log(macros)
+  let o={},re_MRK=/^#(.*)/
+  macros.filter(d=>re_MRK.test(d.str)).map(d=>{ o[d.str]=d.line })
+  return o
+ }
+
+ root.lex=lex;
+ root.jlex=jlex
+ root.typecheck=typecheck;
 })(this);
 /////////////////////////////////////////
