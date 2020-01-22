@@ -1,6 +1,11 @@
 # echos
 minimal input engine
 ```
+history
+v0.1 lex 2020.01.22
+v0.2 coding... cmd
+```
+```
 1.canable the message
 2.canable the selecting 5selects only.
 3.canable the flowing
