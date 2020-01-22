@@ -75,6 +75,10 @@ ec.add(text).run((ec)=>{
 ```
 let wi=wirewalk(maps)
 setInterval(()=>{
- wi.walk(x,y,z,v).draw(dt) //devicecontext
+ wi.iswarp(x,y,z,v)
+ wi.warp(x,y,z,v)
+ wi.walk(v)
+ wi.iswalk(v)
+ wi.draw(dt) //devicecontext
 },1000/20)
 ```
