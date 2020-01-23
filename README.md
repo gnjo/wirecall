@@ -129,7 +129,9 @@ wi.isdoor(x,y,z,v) //there postion
 wi.isdoor(v)//look vector 
 wi.walk(v) //always move the v
 
-let wi=wirewalk(maps,maskmaps)//devicecontext 
+wi.setmap(floor,map,mapmask) //map and mapmask is string or ary. if mapmask null is auto generate
+
+let wi=wirewalk(opts)
 maps[0]=[[],[]...]
 maskmaps[0]=[[9,9],[]...]   //maskmaps is walked log
 //0:watch only
