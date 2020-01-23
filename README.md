@@ -82,6 +82,7 @@ ec.add(text).run((ec)=>{
 ０１２３４５６７８９、飛と同じだが、識別用。
 
 ＊規定されている扉の種類
+扉は壁の一種である。
 扉、普遍的な扉
 東西南北、一方通行の扉、扉と同じ進行方向からしか進行できない。
 赤青黄橙紫緑灰白黒、鍵が必要な扉
@@ -110,7 +111,10 @@ wi.getfront9(|x,y,z,v)
 wi.getaround(depth|x,y,z,v,depth) //vector N fixed.
 wi.pos(x,y,z,v) //same warp
 wi.iswarp(x,y,z,v) //if wall, false.
-wi.iswalk(v) //if wall, false.
+wi.iswalk(v) //if wall or door, false
+wi.isfwalk(v) //if front wall , false
+wi.isdoor()
+wi.isfdoor()
 wi.walk(v) //always move the v
 let wi=wirewalk(maps,dtx)//devicecontext 
 
