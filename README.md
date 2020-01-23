@@ -87,10 +87,13 @@ wi.x //pos y
 wi.y //pos x
 wi.z //floornumber
 wi.v //vector
+//auto set trigger wi.pos or wi.walk
 wi.g //auto set, ground object ex)壁
 wi.f //auto set, front object ex)扉
-wi.a0 //auto set, address B00X00Y00.W
-wi.a1 //auto set, address B00X00Y00
+wi.f9 //front 9
+wi.a3 //around depth 3
+wi.addr0 //auto set, address B00X00Y00.W
+wi.addr1 //auto set, address B00X00Y00
 //
 wi.getfront(|x,y,z,v) //return front of view. ex)壁
 wi.getfront9(|x,y,z,v)
@@ -102,10 +105,8 @@ wi.walk(v) //always move the v
 let wi=wirewalk(maps,dtx)//devicecontext 
 
 setInterval(()=>{
- wi.iswarp(x,y,z,v)
- wi.warp(x,y,z,v)
- wi.walk(v)
- wi.iswalk(v)
+ let v=getvector()//self make
+ ;(wi.iswalk(v))?walk(v):walk()
  wi.draw() //if set dtx draw it.
 },1000/20)
 
