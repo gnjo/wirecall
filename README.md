@@ -113,6 +113,7 @@ let v=wi.r2a(^|v|<|>,N|E|W|S) //relation to absolute //udlr to news
 wi.getfront(|x,y,z,v) //return front of view. ex)壁
 wi.getfront9(|x,y,z,v)
 wi.getaround(depth|x,y,z,v,depth) //vector N fixed.
+wi.getmask() //0...8 and 9
 wi.pos(x,y,z,v) //same warp
 wi.iswarp(x,y,z,v) //if wall, false.
 wi.iswalk(v) //if wall or door, false
@@ -123,12 +124,12 @@ wi.walk(v) //always move the v
 
 let wi=wirewalk(maps,maskmaps)//devicecontext 
 maps[0]=[[],[]...]
-maskmaps[0]=[["？","？"],[]...]   //maskmaps is walked log
-//０：watch only
-//１：first walked //use the event flg
-//２：twice walked
-//３～８：counted
-//？：not watch, not walked
+maskmaps[0]=[[9,9],[]...]   //maskmaps is walked log
+//0:watch only
+//1:first walked //use the event flg
+//2:twice walked
+//3...8:counted stop the 8. Math.min(count++,8)
+//9：not watch, not walked
 
 setInterval(()=>{
  let v=getvector()//self make
