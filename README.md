@@ -102,7 +102,7 @@ ec.add(text).run((ec)=>{
 
 wi.maps
 wi.maskmaps
-
+wi.mapsize =40
 wi.x //pos y
 wi.y //pos x
 wi.z //floornumber
