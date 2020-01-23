@@ -95,7 +95,7 @@ wi.a3 //around depth 3
 wi.addr0 //auto set, address B00X00Y00.W
 wi.addr1 //auto set, address B00X00Y00
 //
-let v=wi.r2a(^|v|<|>,n|e|w|s) //relation to absolute //udlr to news
+let v=wi.r2a(^|v|<|>,N|E|W|S) //relation to absolute //udlr to news
 wi.getfront(|x,y,z,v) //return front of view. ex)壁
 wi.getfront9(|x,y,z,v)
 wi.getaround(depth|x,y,z,v,depth) //vector N fixed.
