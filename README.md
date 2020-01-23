@@ -120,12 +120,15 @@ wi.isfwalk(v) //if front wall , false
 wi.isdoor()
 wi.isfdoor()
 wi.walk(v) //always move the v
-let wi=wirewalk(maps,dtx)//devicecontext 
+
+let wi=wirewalk(maps,maskmaps)//devicecontext 
+maps[0]=[[],[]...]
+maskmaps[0]=[["？","？"],[]...]   //maskmaps is walked log
 
 setInterval(()=>{
  let v=getvector()//self make
  ;(wi.iswalk(v))?walk(v):walk()
- wi.draw() //if set dtx draw it.
+ //wi.draw() //if set dtx draw it.
 },1000/20)
 
 ```
