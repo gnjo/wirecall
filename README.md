@@ -73,13 +73,22 @@ ec.add(text).run((ec)=>{
 
 # wirewalk
 ```
-floor
-yellow hatting: parrize
-purple hatting: dont magic
-green hatting: poizon
-grey hatting: 
-red hatting: heat
-blue hatting: lake
+＊規定されている床の種類
+・、普遍的な床
+！物人、イベントが設定されている床
+上下左右、自動進行の床
+毒闇麻、
+飛落昇降、すべてワープ。
+０１２３４５６７８９、飛と同じだが、識別用。
+
+＊規定されている扉の種類
+扉、普遍的な扉
+東西南北、一方通行の扉、扉と同じ進行方向からしか進行できない。
+赤青黄橙紫緑灰白黒、鍵が必要な扉
+
+＊規定されている壁の種類
+壁、普遍的な扉
+岩土石岳柱、壁色の識別用
 ```
 ```
 
