@@ -100,6 +100,9 @@ ec.add(text).run((ec)=>{
 ```
 ```
 
+wi.maps
+wi.maskmaps
+
 wi.x //pos y
 wi.y //pos x
 wi.z //floornumber
@@ -107,6 +110,7 @@ wi.v //vector
 //auto set trigger wi.pos or wi.walk
 wi.g //auto set, ground object ex)壁
 wi.f //auto set, front object ex)扉
+wi.m //auto set, ground mask
 wi.f9 //front 9
 wi.a3 //around depth 3
 wi.addr0 //auto set, address B00X00Y00.W
@@ -116,7 +120,7 @@ let v=wi.r2a(^|v|<|>,N|E|W|S) //relation to absolute //udlr to news
 wi.getfront(|x,y,z,v) //return front of view. ex)壁
 wi.getfront9(|x,y,z,v)
 wi.getaround(depth|x,y,z,v,depth) //vector N fixed.
-wi.getmask() //0...8 and 9
+wi.getmask(|x,y,z,v) //0...8 and 9
 wi.pos(x,y,z,v) //same warp
 wi.iswarp(x,y,z,v) //if wall, false.
 wi.iswalk(v) //if wall or door, false
