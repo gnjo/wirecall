@@ -111,6 +111,7 @@ wi.v //vector
 wi.g //auto set, ground object ex)壁
 wi.f //auto set, front object ex)扉
 wi.m //auto set, ground mask
+wi.vc //auto set, vector change flg, dont change x,y,z
 wi.f9 //front 9
 wi.a3 //around depth 3
 wi.addr0 //auto set, address #B00X00Y00.W
