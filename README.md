@@ -131,3 +131,16 @@ setInterval(()=>{
  0 0 0 0 0 0 0
  
 ```
+```
+function r2a(_k,_v){
+ let v=(''+_v).toUpperCase()||'N',k=_k||'^'//<>^v
+ let vk={
+  'N^':'N','Nv':'S','N<':'W','N>':'E'
+ ,'S^':'S','Sv':'N','S<':'E','S>':'W'
+ ,'W^':'W','Wv':'E','W<':'S','W>':'N'
+ ,'E^':'E','Ev':'W','E<':'N','E>':'S'
+ }
+ return vk[v+k]||'N'
+}
+
+```
