@@ -103,8 +103,8 @@ ec.add(text).run((ec)=>{
 wi.maps
 wi.maskmaps
 wi.mapsize =40
-wi.x //pos y
-wi.y //pos x
+wi.x //pos x
+wi.y //pos y
 wi.z //floornumber
 wi.v //vector
 //auto set trigger wi.pos or wi.walk
