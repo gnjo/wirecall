@@ -113,8 +113,8 @@ wi.f //auto set, front object ex)扉
 wi.m //auto set, ground mask
 wi.f9 //front 9
 wi.a3 //around depth 3
-wi.addr0 //auto set, address B00X00Y00.W
-wi.addr1 //auto set, address B00X00Y00
+wi.addr0 //auto set, address #B00X00Y00.W
+wi.addr1 //auto set, address #B00X00Y00
 //
 let v=wi.r2a(^|v|<|>,N|E|W|S) //relation to absolute //udlr to news
 wi.getfront(|x,y,z,v) //return front of view. ex)壁
