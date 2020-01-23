@@ -120,9 +120,9 @@ wi.getmask() //0...8 and 9
 wi.pos(x,y,z,v) //same warp
 wi.iswarp(x,y,z,v) //if wall, false.
 wi.iswalk(v) //if wall or door, false
-wi.isfwalk(v) //if front wall , false
-wi.isdoor()
-wi.isfdoor()
+wi.isdoor() //now position
+wi.isdoor(x,y,z,v) //there postion
+wi.isdoor(v)//look vector 
 wi.walk(v) //always move the v
 
 let wi=wirewalk(maps,maskmaps)//devicecontext 
