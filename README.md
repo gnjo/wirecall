@@ -123,7 +123,10 @@ wi.walk(v) //always move the v
 
 let wi=wirewalk(maps,maskmaps)//devicecontext 
 maps[0]=[[],[]...]
-maskmaps[0]=[["？","？"],[]...]   //maskmaps is walked log
+maskmaps[0]=[["０","０"],[]...]   //maskmaps is walked log
+//０：not watch, not walk
+//１：walked //use the event flg
+//２：watch only. not walk.
 
 setInterval(()=>{
  let v=getvector()//self make
