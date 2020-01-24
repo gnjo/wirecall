@@ -116,6 +116,7 @@ wi.f9 //front 9
 wi.a3 //around depth 3
 wi.addr0 //auto set, address #B00X00Y00.W
 wi.addr1 //auto set, address #B00X00Y00
+wi.addr2 //auto set, address #B00
 //
 wi.walk(v|x,y,z,v) //always move the v. walk|like a warp
 //
