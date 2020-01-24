@@ -107,7 +107,7 @@ wi.x //pos x
 wi.y //pos y
 wi.z //floornumber
 wi.v //vector
-//auto set trigger wi.pos or wi.walk
+//auto set trigger wi.walk
 wi.g //auto set, ground object ex)壁
 wi.f //auto set, front object ex)扉
 wi.m //auto set, ground mask
@@ -117,20 +117,18 @@ wi.a3 //around depth 3
 wi.addr0 //auto set, address #B00X00Y00.W
 wi.addr1 //auto set, address #B00X00Y00
 //
+wi.walk(v|x,y,z,v) //always move the v. walk|like a warp
+//
 let v=wi.r2a(^|v|<|>,N|E|W|S) //relation to absolute //udlr to news
 wi.getfront(|x,y,z,v) //return front of view. ex)壁
 wi.getfront9(|x,y,z,v)
 wi.getaround(depth|x,y,z,v,depth) //vector N fixed.
 wi.getmask(|x,y,z,v) //0...8 and 9
-wi.pos(x,y,z,v) //same warp
-wi.iswarp(x,y,z,v) //if wall, false.
-wi.iswalk(v) //if wall or door, false
-wi.isdoor() //now position
-wi.isdoor(x,y,z,v) //there postion
-wi.isdoor(v)//look vector 
-wi.walk(v) //always move the v
+wi.iswalk(|v|x,y,z,v) //if wall or door, false
+wi.isdoor(|v|x,y,z,v) //now position|there position|look vector
 
-wi.setmap(floor,map,mapmask) //map and mapmask is string or ary. if mapmask null is auto generate
+wi.setmap(floor,map,mapmask) 
+//map and mapmask is string or ary. if mapmask null is auto generate
 
 let wi=wirewalk(opts)
 maps[0]=[[],[]...]
