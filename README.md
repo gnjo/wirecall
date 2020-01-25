@@ -1,74 +1,93 @@
-# echos
+# wirecall
 minimal input engine
 ```
-history
-v0.1 lex 2020.01.22
-v0.2 coding... cmd
+{.*}>>>(#.*|{.*})|(|\*|\?|[ims][0-9])>.*|\*[^>].*|{{{([\s\S]*?)}}}
 ```
 ```
-1.canable the message
-2.canable the selecting 5selects only.
-3.canable the flowing
-4.canable the simple jump
+var $i0,$i1,$i2,$i3,$i4,$i5,$i6,$i7,$i8,$i9 //like a image socket
+var $s0,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9 //like a sound socket
+var $m0,$m1,$m2,$m3,$m4,$m5,$m6,$m7,$m8,$m9 //like a message socket
+var $$0,$$1,$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$$ //returns
+var $$k //keyinput
+var $$n //selectnumber
+var $$w //waitcount //decreasing 60fps
+
+let ca=wirecall({})
+ca.fps=20
+ca.meslength=30 //
+ca.nrange=6 //select range 6
+ca.addwait=3 //* is 50ms
+ca.kflg=0 //key wait flg
+ca.setkflg=()=>{ca.kflg=1}  //auto reset ca.kflg
+ca.setkey=(d)=>{ $$k=d||void 0,ca.kflg=($$k)?0:ca.kflg } //d null is flash
 ```
 ```
-script('.../echos.js')
-script('.../fn.js')
-```
-```
-#xyz //set the jumpmark
-*  //wait 4count 
-{} //javascriptworld
+i0>
+i1>
+i2...i9 //mapping $i0...$i9
+
+s0>
+s1>
+s2...s9 //mapping $s0...$s9
+
+m0>
+m1>
+m2...m8 //mapping $m0...$m8
+m9> //select message $m9
+
+> m0
+*> m0 with keywait
+
+k> keywait only //mapping $$k
+
+**** //wait * is 50ms. ****=4*50ms
+
+m9>
+?> selects //auto keywait
+$$n //select return  -1:cancel,0:first,1...
+
+$$$ //return
+$$0 //return same $$$
+$$1...9 return other
+
 {1}>>>#xyz //if jump
-*>same log need keywait
->not keywait
-1>infomessage// if select use infomessage zone
-?>selectmessage //use message layer 2
+{1}>>>### //jumpback
+
+{/*javascript world*/} //one line only. return $$$
+{{{ xyz }}} //one line $$$ return
 {{{
-multiline input to $$$
+}}}  //$$$ return, trimed the head and tail.
+```
+
+
+```
+/////////////////////////////////////////
+#entrypoint //always start the #entrypoint
+
+{1}>>>#wirewalk
+/////////////////////////////////////////
+#wirewalk
+k>
+{wi.walk(wi.r2a($$k,wi.v)) }
+{ta.isjump(wi.addr0) }>>>{wi.addr0}
+{ta.isjump(wi.addr1) }>>>{wi.addr1}
+{ta.isjump(wi.addr2) }>>>{wi.addr2}
+*
+{1}>>>#wirewalk
+////////////////////////////////////////
+```
+
+```
+#entrypoint
+
+>choice is yours.
+{{{
+meat
+meal
+meet
 }}}
-
-/*
-/\*{1,9}[^\>]|{.*}>>>({.*}|#.*)|#.*|\?>.*|(\*[0-9]|[0-9\*]|)>.*|{.*}|{{{([\s\S]*?)}}}/g
-*/
-
-```
-```
-echos={} //core
-fn={} //util functions
-$$$=void 0 //return //$
-$r0=void 0 //same $$$
-$r1=void 0 //other return
-$r2=void 0 //
-$r3=void 0 // 
-$r4=void 0 // 
-$r5=void 0 // 
-$r6=void 0 // 
-$r7=void 0 // 
-$r8=void 0 //
-$r9=void 0 // 
-$$0="" //message layer 0 
-$$1="" //
-$$2="" //select layer
-$$3="" //
-$$4="" //
-$$5="" //
-$$6="" //
-$$7="" //
-$$8="" //
-$$9="" // 
-$$k=void 0 //latest key
-$$n=void 0 //latest select number
-$$m='free' //now mode, sel|mes|free
-```
-```
-let ec=echos()
-ec.add(text).run((ec)=>{
- //polling fps for draw.
- //message $$0...$$9
- //selectnumber $$n
- //mode $$m
-})
+?>{$$$}
+>select number {$$n}, select message {$$1}
 ```
 
 # wirewalk
