@@ -2,6 +2,7 @@
 minimal input engine       
 wirecall: https://codepen.io/gnjo/pen/ExaMwNj       
 wirewalk: https://codepen.io/gnjo/pen/BaybyKQ
+wiredraw:
 ```
 {.*}>>>(#.*|{.*})|(|\*|\?|[ims][0-9])>.*|\*[^>].*|{{{([\s\S]*?)}}}
 ```
