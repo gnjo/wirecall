@@ -122,7 +122,6 @@ setInterval(()=>{
   return o;
  }
  root.reader=entry;
- */
 /*
 let li=`MRK\nCMM\nEVL「「あいうえを入れておく」」`.split('\n');
 let rd=reader(li);
@@ -131,7 +130,7 @@ fn.q('button').onclick=()=>{
  fn.q('pre.line').textContent=rd.line +','+ rd.end
  fn.q('pre.end').textContent=rd.isEnd()?'end':'not'
  rd.next();
-}
+}*/
 })(this);
 /////////////////////////////////////////
 
