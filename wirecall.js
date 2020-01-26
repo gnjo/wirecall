@@ -161,9 +161,11 @@ fn.q('button').onclick=()=>{
  function _m(obj,bigflg){return obj.replace(/{(.*?)}/g,(d,dd)=>{return $$$=_(dd),bigflg?toBig(''+$$$):$$$})}
  //trim { and }
  function _t(obj){return obj.replace(/{|}/g,'')}
+ function _t2(obj){return obj.replace(/{{{|}}}/g,'').trim()}
  root._c=_c
  root._=_
  root._m=_m
  root._t=_t
+ root._t2=_t2 
 })(this);
 //////////////////////////////////////////////
