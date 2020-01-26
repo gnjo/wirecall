@@ -1,5 +1,11 @@
 /////////////////////////////////////////
-
+var $i0,$i1,$i2,$i3,$i4,$i5,$i6,$i7,$i8,$i9 //like a image socket
+var $s0,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9 //like a sound socket
+var $m0,$m1,$m2,$m3,$m4,$m5,$m6,$m7,$m8,$m9 //like a message socket
+var $$0,$$1,$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$$ //returns
+var $$k //keyinput
+var $$n //selectnumber
+var $$w //waitcount //decreasing 60fps
 /////////////////////////////////////////
 ;(function(root){
  let fn={}
